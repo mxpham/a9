@@ -1,0 +1,35 @@
+h1, p{
+}
+
+#tiles img{
+  width: 75px;
+  height:auto;
+}
+#tiles{
+  margin-top:220px;
+  margin-left: 50px;
+}
+body{
+  background-color: white;
+}
+#board img{
+  float:left;
+}
+#board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+  margin-top:10px;
+  margin-left:565px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right:50px;
+}
+#holder{
+  position: absolute;
+  bottom:0;
+  z-index: -1;
+}
