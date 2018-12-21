@@ -1,10 +1,9 @@
-h1, p{
-}
-
+/*resizes tiles*/
 #tiles img{
   width: 75px;
   height:auto;
 }
+/*tile location*/
 #tiles{
   margin-top:220px;
   margin-left: 50px;
@@ -12,14 +11,17 @@ h1, p{
 body{
   background-color: white;
 }
+/*puts all individual board pieces together*/
 #board img{
   float:left;
 }
+/*centers Scrabble board*/
 #board{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/*customize play button*/
 button{
   margin-top:10px;
   margin-left:565px;
@@ -28,8 +30,10 @@ button{
   padding-left: 50px;
   padding-right:50px;
 }
+/*puts tile holder to back of tile images*/
 #holder{
   position: absolute;
   bottom:0;
   z-index: -1;
 }
+
