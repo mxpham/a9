@@ -1,3 +1,5 @@
+//drag and drop widgets allows tiles to be dragged and dropped from holder
+//to Scrabble board
 $( function() {
   $( "#tile1" ).draggable({
     snap: ".dropzones",
@@ -10,7 +12,7 @@ $( function() {
          $('.item').draggable("disable");
      }
   });
-
+//allowing tiles to be snapped to individual blocks on Scrabble board
   $( "#tile2" ).draggable({
     revert:"invalid",
     snap: "#board1, #board2, #board3, #board4, #board5, #board6, #board7, #board8, #board9, #board10, #board11, #board12, #board13, #board14, #board15"});
@@ -29,12 +31,8 @@ $( function() {
   $( "#tile7" ).draggable({
     revert:"invalid",
     snap: "#board1, #board2, #board3, #board4, #board5, #board6, #board7, #board8, #board9, #board10, #board11, #board12, #board13, #board14, #board15"});
-  // $( "#tile2" ).draggable({ revert: true });
-  // $( "#tile3" ).draggable({ revert: true });
-  // $( "#tile4" ).draggable({ revert: true });
-  // $( "#tile5" ).draggable({ revert: true });
-  // $( "#tile6" ).draggable({ revert: true });
-  // $( "#tile7" ).draggable({ revert: true });
+
+  //allowing Scrabble board to be a droppable field
   $( "#board1" ).droppable({
       classes: {
         "ui-droppable-hover": "ui-state-hover"
@@ -117,10 +115,12 @@ $( function() {
     });
 } );
 
+//pressing the button will generate random letters for the game
 function play(){
   var myObj, boardValue = [], min, max;
   min = 0;
   max = 26;
+  //data structure to hold all letters, values, and amount of letters available
   myObj = {"pieces": [
     	{"letter":"A", "value":1,  "amount":9, "src": "Scrabble_Tiles/Scrabble_Tile_A.jpg", "id": "A"},
     	{"letter":"B", "value":3,  "amount":2, "src": "Scrabble_Tiles/Scrabble_Tile_B.jpg", "id": "B"},
@@ -151,10 +151,8 @@ function play(){
     	{"letter":"_", "value":0,  "amount":2, "src": "Scrabble_Tiles/Scrabble_Tile_Blank.jpg", "id": "blank"}
     ]
   }
-  // for(var i = 0; i < 15; i++){
-  //   boardValue =
-  // }
 
+  //allows random selection of tiles
   var arr = [], x;
 
   for(var i = 0; i < 7; i++){
@@ -162,9 +160,7 @@ function play(){
     x = myObj.pieces[random].src;
     arr[i] = x
   }
-
-  console.log(myObj.pieces[0].src);
-
+  //displays tiles on page
   document.getElementById("tile1").src = arr[0];
   document.getElementById("tile2").src = arr[1];
   document.getElementById("tile3").src = arr[2];
@@ -175,3 +171,4 @@ function play(){
 
 
 }
+
