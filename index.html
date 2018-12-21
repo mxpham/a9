@@ -1,3 +1,10 @@
+<!--
+Date: December 17th, 2018
+SID: 01617504
+91.61 GUI Programming I Assignment: Creating a Scrabble game
+Mai Pham, UMass Lowell Computer Science, Mai_Pham@student.uml.edu
+Copyright (c) 2018 by Mai Pham. All rights reserved.
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css" />
   <title>jQuery UI Draggable - Default functionality</title>
+  <!-- importing plugins -->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -19,6 +27,7 @@
     <p>Score:</p>
     <p id="score"></p>
   </div>
+  <!-- creating Srabble board -->
   <div id="board">
     <img id="board1" class="dropzones" src="image_part_001.jpg">
     <img id="board2" class="dropzones" src= "image_part_002.jpg">
@@ -37,6 +46,7 @@
     <img id="board15" class="dropzones" src="image_part_015.jpg">
   </div>
 
+<!-- generate random letters onto holder-->
   <button id="play" onclick="play()">PLAY</button>
   <div id="tiles">
     <img id="tile1" class="ui-widget-content">
@@ -52,7 +62,6 @@
     <img src="tile_holder.png">
   </div>
 
-
-
 </body>
 </html>
+
